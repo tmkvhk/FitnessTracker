@@ -1,1 +1,27 @@
-<p>nutrition works!</p>
+<div>
+    <mat-form-field>
+      <input matInput type="text" [(ngModel)]="query" placeholder="Ex query: 1 lb brisket and 0.5 lb fries">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="search()">Search</button>
+</div>
+
+<div *ngIf="response">
+  <h2>Search Results</h2>
+    <div *ngFor="let item of response">
+      <h3>{{ item.name }}</h3>
+      <ul>
+        <li>Calories: {{ item.calories }}</li>
+        <li>Serving Size: {{ item.serving_size_g }}</li>
+        <li>Total Fat: {{ item.fat_total_g }}</li>
+        <li>Saturated Fat: {{ item.fat_saturated_g }}</li>
+        <li>Protein: {{ item.protein_g }}</li>
+        <li>Sodium: {{ item.sodium_mg }}</li>
+        <li>Potassium: {{ item.potassium_mg }}</li>
+        <li>Cholesterol: {{ item.cholesterol_mg }}</li>
+        <li>Total Carbohydrates: {{ item.carbohydrates_total_g }}</li>
+        <li>Fiber: {{ item.fiber_g }}</li>
+        <li>Sugar: {{ item.sugar_g }}</li>
+      </ul>
+    </div>
+</div>
+  
