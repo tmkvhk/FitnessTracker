@@ -6,14 +6,7 @@ mat-card{
     width: 50%;
     background-color: #d3dee4;
   }
-  mat-card-header{
-    text-align: center;
-    margin: auto;
-  }
-  mat-card-title{
-    text-align: center;
-    margin: auto;
-  }
+  
   mat-card-content{
     margin:auto;
   }
