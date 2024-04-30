@@ -1,5 +1,5 @@
-import { Component, NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-nutrition',
@@ -10,14 +10,16 @@ export class NutritionComponent {
   query: string = '';
   response: any;
 
-  constructor(private http: HttpClient) { }
+
+  constructor(private dataService: DataService) { }
 
   search() {
-    const url = `http://localhost:3000/api/nutrition?query=${this.query}`;
-    this.http.get(url).subscribe((data: any) => {
+    this.dataService.search(this.query);
+  }
+
+  ngOnInit(): void {
+    this.dataService.response$.subscribe(data => {
       this.response = data;
-    }, error => {
-      console.error('Error:', error);
     });
   }
 }

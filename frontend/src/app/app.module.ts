@@ -5,18 +5,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatCardModule } from '@angular/material/card';
+import { NutritionHistoryComponent } from './nutrition-history/nutrition-history.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    NutritionComponent
+    NutritionComponent,
+    HeaderComponent,
+    FooterComponent,
+    NutritionHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
