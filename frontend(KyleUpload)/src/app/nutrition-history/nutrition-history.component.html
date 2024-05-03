@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-accordion multi="true" *ngIf="dataHistory.length>0">
+    <mat-expansion-panel *ngFor="let food of dataHistory">
+      <mat-expansion-panel-header>
+        <p>
+          {{food.enteredQuery}}
+        </p>
+      </mat-expansion-panel-header>
+      <ul>
+        <li>Calories: {{ food.calories }}</li>
+        <li>Serving Size: {{ food.serving_size_g }}</li>
+        <li>Total Fat: {{ food.fat_total_g }}</li>
+        <li>Saturated Fat: {{ food.fat_saturated_g }}</li>
+        <li>Protein: {{ food.protein_g }}</li>
+        <li>Sodium: {{ food.sodium_mg }}</li>
+        <li>Potassium: {{ food.potassium_mg }}</li>
+        <li>Cholesterol: {{ food.cholesterol_mg }}</li>
+        <li>Total Carbohydrates: {{ food.carbohydrates_total_g }}</li>
+        <li>Fiber: {{ food.fiber_g }}</li>
+        <li>Sugar: {{ food.sugar_g }}</li>
+      </ul>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="onDelete(food.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p class="info-text mat-body-1" *ngIf="dataHistory.length <= 0">No Data to Render</p>
+    <!-- <div *ngIf="response" >
+    <h2 >Search Results</h2>
+        <div *ngFor="let item of response" >
+        <h3>{{ item.name }}</h3>
+        <ul>
+            <li>Calories: {{ item.calories }}</li>
+            <li>Serving Size: {{ item.serving_size_g }}</li>
+            <li>Total Fat: {{ item.fat_total_g }}</li>
+            <li>Saturated Fat: {{ item.fat_saturated_g }}</li>
+            <li>Protein: {{ item.protein_g }}</li>
+            <li>Sodium: {{ item.sodium_mg }}</li>
+            <li>Potassium: {{ item.potassium_mg }}</li>
+            <li>Cholesterol: {{ item.cholesterol_mg }}</li>
+            <li>Total Carbohydrates: {{ item.carbohydrates_total_g }}</li>
+            <li>Fiber: {{ item.fiber_g }}</li>
+            <li>Sugar: {{ item.sugar_g }}</li>
+        </ul>
+        </div>
+    </div> -->
+</mat-card>
