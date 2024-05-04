@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { NutritionHistoryComponent } from './nutrition-history/nutrition-history.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     NutritionComponent,
     HeaderComponent,
     FooterComponent,
-    NutritionHistoryComponent
+    NutritionHistoryComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
