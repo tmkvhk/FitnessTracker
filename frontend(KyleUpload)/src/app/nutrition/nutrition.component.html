@@ -6,9 +6,9 @@
     <button mat-raised-button color="primary" (click)="onAddFood()">Add</button>
 </div>
 
-<div *ngIf="response">
+<div *ngIf="item">
   <h2>Search Results</h2>
-    <div *ngFor="let item of response">
+    <div>
       <h3>{{ item.name }}</h3>
       <ul>
         <li>Calories: {{ item.calories }}</li>

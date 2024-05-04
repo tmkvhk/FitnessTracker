@@ -2,6 +2,7 @@ import { Component,OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-nutrition',
   templateUrl: './nutrition.component.html',
@@ -10,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class NutritionComponent implements OnInit, OnDestroy{
   query: string = '';
   response: any;
+  item: any;
   private dataSub: Subscription = new Subscription;
 
 
@@ -17,12 +19,14 @@ export class NutritionComponent implements OnInit, OnDestroy{
 
   onAddFood() {
     this.dataService.addFood(this.query);
-
   }
 
   ngOnInit(): void {
     this.dataSub = this.dataService.response$.subscribe(data => {
       this.response = data;
+      if (this.response) {
+        this.item = this.response[this.response.length - 1][0];
+      }
     });
   }
 
