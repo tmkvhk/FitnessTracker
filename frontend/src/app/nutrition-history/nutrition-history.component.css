@@ -1,31 +1,33 @@
 mat-card{
-    text-align: center;
-    padding: 5px;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 50%;
-    background-color: #d3dee4;
-  }
-  
-  mat-card-content{
-    margin:auto;
-  }
-  
-  form{
-    text-align: center;
-    margin: auto;
-  }
-  
-  h1{
-    text-align: center;
-  }
-  button{
-    margin: auto;
-    width: 100%;
-    align-content: center;
-  }
-  .history-container {
-    max-height: 500px;
-    overflow-y: auto;
-  }
-  
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 50%;
+  background-color: #d3dee4;
+}
+mat-card-header{
+  text-align: center;
+  margin: auto;
+}
+mat-card-title{
+  text-align: center;
+  margin: auto;
+}
+mat-card-content{
+  margin:auto;
+}
+
+form{
+  text-align: center;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+}
+button{
+  margin: auto;
+  width: 100%;
+  align-content: center;
+}

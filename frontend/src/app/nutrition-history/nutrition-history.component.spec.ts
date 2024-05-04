@@ -11,7 +11,7 @@ describe('NutritionHistoryComponent', () => {
       declarations: [NutritionHistoryComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(NutritionHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
