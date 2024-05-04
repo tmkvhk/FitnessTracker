@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
-import { NutritionHistoryComponent } from './nutrition-history/nutrition-history.component'
+import { NutritionHistoryComponent } from './nutrition-history/nutrition-history.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NutritionHistoryComponent } from './nutrition-history/nutrition-history
     NutritionComponent,
     HeaderComponent,
     FooterComponent,
-    NutritionHistoryComponent
+    NutritionHistoryComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,

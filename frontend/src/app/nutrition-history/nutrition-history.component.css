@@ -24,4 +24,8 @@ mat-card{
     width: 100%;
     align-content: center;
   }
+  .history-container {
+    max-height: 500px;
+    overflow-y: auto;
+  }
   

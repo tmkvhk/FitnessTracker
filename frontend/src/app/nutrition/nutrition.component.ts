@@ -9,7 +9,7 @@ import { DataService } from '../services/data.service';
 export class NutritionComponent {
   query: string = '';
   response: any;
-
+  showSearchHistory: boolean = false;
 
   constructor(private dataService: DataService) { }
 
@@ -21,5 +21,9 @@ export class NutritionComponent {
     this.dataService.response$.subscribe(data => {
       this.response = data;
     });
+  }
+
+  toggleSearchHistory() {
+    this.showSearchHistory = !this.showSearchHistory;
   }
 }
